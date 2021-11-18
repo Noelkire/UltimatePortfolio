@@ -12,6 +12,8 @@
 		500EDD282746F33200FE3714 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EDD272746F33200FE3714 /* ProjectsView.swift */; };
 		500EDD2A2747093C00FE3714 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EDD292747093C00FE3714 /* Item-CoreDataHelpers.swift */; };
 		500EDD2C27470A5E00FE3714 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EDD2B27470A5E00FE3714 /* Project-CoreDataHelpers.swift */; };
+		500EDD2E274710C700FE3714 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EDD2D274710C700FE3714 /* EditItemView.swift */; };
+		500EDD302747153B00FE3714 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EDD2F2747153B00FE3714 /* ItemRowView.swift */; };
 		5033DA8C27463ECD003BA684 /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033DA8B27463ECD003BA684 /* UltimatePortfolioApp.swift */; };
 		5033DA8E27463ECD003BA684 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033DA8D27463ECD003BA684 /* ContentView.swift */; };
 		5033DA9027463ECE003BA684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5033DA8F27463ECE003BA684 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		500EDD272746F33200FE3714 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		500EDD292747093C00FE3714 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		500EDD2B27470A5E00FE3714 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		500EDD2D274710C700FE3714 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		500EDD2F2747153B00FE3714 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		5033DA8827463ECD003BA684 /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5033DA8B27463ECD003BA684 /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		5033DA8D27463ECD003BA684 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,9 +70,11 @@
 				5033DA8B27463ECD003BA684 /* UltimatePortfolioApp.swift */,
 				500EDD252746F27E00FE3714 /* HomeView.swift */,
 				500EDD272746F33200FE3714 /* ProjectsView.swift */,
+				500EDD2F2747153B00FE3714 /* ItemRowView.swift */,
 				500EDD292747093C00FE3714 /* Item-CoreDataHelpers.swift */,
 				500EDD2B27470A5E00FE3714 /* Project-CoreDataHelpers.swift */,
 				5033DA8D27463ECD003BA684 /* ContentView.swift */,
+				500EDD2D274710C700FE3714 /* EditItemView.swift */,
 				5033DA9927464276003BA684 /* Main.xcdatamodeld */,
 				500EDD232746E86E00FE3714 /* DataController.swift */,
 				5033DA8F27463ECE003BA684 /* Assets.xcassets */,
@@ -159,10 +165,12 @@
 				5033DA9B27464276003BA684 /* Main.xcdatamodeld in Sources */,
 				500EDD2C27470A5E00FE3714 /* Project-CoreDataHelpers.swift in Sources */,
 				500EDD242746E86E00FE3714 /* DataController.swift in Sources */,
+				500EDD302747153B00FE3714 /* ItemRowView.swift in Sources */,
 				5033DA8E27463ECD003BA684 /* ContentView.swift in Sources */,
 				500EDD262746F27E00FE3714 /* HomeView.swift in Sources */,
 				5033DA8C27463ECD003BA684 /* UltimatePortfolioApp.swift in Sources */,
 				500EDD2A2747093C00FE3714 /* Item-CoreDataHelpers.swift in Sources */,
+				500EDD2E274710C700FE3714 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

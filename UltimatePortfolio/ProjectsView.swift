@@ -10,7 +10,7 @@ import SwiftUI
 struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-
+    
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
     
@@ -33,16 +33,16 @@ struct ProjectsView: View {
                         //items are stored as a set when adding relationships so it doesnt
                         // allow duplicates. Since this is an obj-c set we have to typecast
                         ForEach(project.projectItems) { item in
-                            Text(item.itemTitle)
+                            ItemRowView(item: item)
                         }
                     }
                 }
             }
-            //styling of the list, gives it an inset
-            .listStyle(InsetGroupedListStyle())
-            //name of the View based on where closed or open 
-            .navigationTitle(showClosedProjects ? "Closed Projects": "Open Projects")
         }
+        //styling of the list, gives it an inset
+        .listStyle(InsetGroupedListStyle())
+        //name of the View based on where closed or open
+        .navigationTitle(showClosedProjects ? "Closed Projects": "Open Projects")
     }
 }
 
