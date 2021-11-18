@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct UltimatePortfolioApp: App {
+    //Our entire project needs access to a DataController instance
+    // We created one inside our @main/App Struct
+    @StateObject var dataController: DataController
+    init() {
+        let dataController = DataController()
+        _dataController = StateObject(wrappedValue: dataController)
+    }
     var body: some Scene {
         WindowGroup {
+            //sending our data controller into the ContentView environment
             ContentView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environmentObject(dataController)
         }
     }
 }
