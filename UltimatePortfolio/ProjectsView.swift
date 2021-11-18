@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProjectsView: View {
+    static let openTag: String = "Open"
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
     
@@ -26,11 +27,11 @@ struct ProjectsView: View {
                 //either open or closed
                 ForEach(projects.wrappedValue) { project in
                     //for each project, it will appear as a seperate section in the table
-                    Section(header: Text(project.title ?? "")) {
+                    Section(header: Text(project.projectTitle)) {
                         //items are stored as a set when adding relationships so it doesnt
                         // allow duplicates. Since this is an obj-c set we have to typecast
-                        ForEach(project.items?.allObjects as? [Item] ?? []) { item in
-                            Text(item.title ?? "")
+                        ForEach(project.projectItems) { item in
+                            Text(item.itemTitle)
                         }
                     }
                 }
