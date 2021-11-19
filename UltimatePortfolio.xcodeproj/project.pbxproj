@@ -20,6 +20,9 @@
 		5033DA9327463ECE003BA684 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5033DA9227463ECE003BA684 /* Preview Assets.xcassets */; };
 		5033DA9B27464276003BA684 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5033DA9927464276003BA684 /* Main.xcdatamodeld */; };
 		5049A48027471D69004D6034 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049A47F27471D69004D6034 /* Binding-OnChange.swift */; };
+		5049A482274720C3004D6034 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049A481274720C3004D6034 /* ProjectHeaderView.swift */; };
+		5049A48427472272004D6034 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5049A48327472272004D6034 /* Colors.xcassets */; };
+		5049A48627472312004D6034 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049A48527472312004D6034 /* EditProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		5033DA9227463ECE003BA684 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5033DA9A27464276003BA684 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		5049A47F27471D69004D6034 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		5049A481274720C3004D6034 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
+		5049A48327472272004D6034 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5049A48527472312004D6034 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				5033DA8B27463ECD003BA684 /* UltimatePortfolioApp.swift */,
+				5049A48527472312004D6034 /* EditProjectView.swift */,
+				5049A481274720C3004D6034 /* ProjectHeaderView.swift */,
+				5049A48327472272004D6034 /* Colors.xcassets */,
 				500EDD252746F27E00FE3714 /* HomeView.swift */,
 				500EDD272746F33200FE3714 /* ProjectsView.swift */,
 				5049A47F27471D69004D6034 /* Binding-OnChange.swift */,
@@ -152,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5049A48427472272004D6034 /* Colors.xcassets in Resources */,
 				5033DA9327463ECE003BA684 /* Preview Assets.xcassets in Resources */,
 				5033DA9027463ECE003BA684 /* Assets.xcassets in Resources */,
 			);
@@ -165,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				500EDD282746F33200FE3714 /* ProjectsView.swift in Sources */,
+				5049A482274720C3004D6034 /* ProjectHeaderView.swift in Sources */,
 				5033DA9B27464276003BA684 /* Main.xcdatamodeld in Sources */,
 				500EDD2C27470A5E00FE3714 /* Project-CoreDataHelpers.swift in Sources */,
+				5049A48627472312004D6034 /* EditProjectView.swift in Sources */,
 				500EDD242746E86E00FE3714 /* DataController.swift in Sources */,
 				500EDD302747153B00FE3714 /* ItemRowView.swift in Sources */,
 				5033DA8E27463ECD003BA684 /* ContentView.swift in Sources */,

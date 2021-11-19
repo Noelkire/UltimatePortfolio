@@ -29,7 +29,7 @@ struct ProjectsView: View {
                 //either open or closed
                 ForEach(projects.wrappedValue) { project in
                     //for each project, it will appear as a seperate section in the table
-                    Section(header: Text(project.projectTitle)) {
+                    Section(header: ProjectHeaderView(project:project)) {
                         //items are stored as a set when adding relationships so it doesnt
                         // allow duplicates. Since this is an obj-c set we have to typecast
                         ForEach(project.projectItems) { item in
@@ -38,11 +38,11 @@ struct ProjectsView: View {
                     }
                 }
             }
+            //styling of the list, gives it an inset
+            .listStyle(InsetGroupedListStyle())
+            //name of the View based on where closed or open
+            .navigationTitle(showClosedProjects ? "Closed Projects": "Open Projects")
         }
-        //styling of the list, gives it an inset
-        .listStyle(InsetGroupedListStyle())
-        //name of the View based on where closed or open
-        .navigationTitle(showClosedProjects ? "Closed Projects": "Open Projects")
     }
 }
 
