@@ -11,6 +11,9 @@ struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
     
+    @State private var showingSortOrder = false
+    @State private var sortOrder = Item.SortOrder.optimized
+    
     @EnvironmentObject var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
     
@@ -21,6 +24,16 @@ struct ProjectsView: View {
         self.showClosedProjects = showClosedProjects
         
         projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \Project.creationDate, ascending: false) ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
+    }
+    func items(for project: Project) -> [Item] {
+        switch sortOrder {
+        case .optimized:
+            return project.projectItemsDeafaultSorted
+        case .title:
+            return project.projectItems.sorted { $0.itemTitle < $1.itemTitle}
+        case .creationDate:
+            return project.projectItems.sorted { $0.itemCreationDate < $1.itemCreationDate }
+        }
     }
     
     var body: some View {
@@ -35,7 +48,7 @@ struct ProjectsView: View {
                     Section(header: ProjectHeaderView(project:project)) {
                         //items are stored as a set when adding relationships so it doesnt
                         // allow duplicates. Since this is an obj-c set we have to typecast
-                        ForEach(project.projectItems) { item in
+                        ForEach(items(for:project)) { item in
                             ItemRowView(item: item)
                         }
                         .onDelete { offsets in
@@ -56,7 +69,7 @@ struct ProjectsView: View {
                                     dataController.save()
                                 }
                             } label: {
-                            Label("Add New Item", systemImage: "plus")
+                                Label("Add New Item", systemImage: "plus")
                             }
                         }
                     }
@@ -67,18 +80,34 @@ struct ProjectsView: View {
             //name of the View based on where closed or open
             .navigationTitle(showClosedProjects ? "Closed Projects": "Open Projects")
             .toolbar {
-                if showClosedProjects == false {
-                    Button {
-                        withAnimation {
-                            let project = Project(context: managedObjectContext)
-                            project.closed = false
-                            project.creationDate = Date()
-                            dataController.save()
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if showClosedProjects == false {
+                        Button {
+                            withAnimation {
+                                let project = Project(context: managedObjectContext)
+                                project.closed = false
+                                project.creationDate = Date()
+                                dataController.save()
+                            }
+                        } label: {
+                            Label("Add Project", systemImage: "plus")
                         }
-                    } label: {
-                        Label("Add Project", systemImage: "plus")
                     }
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingSortOrder.toggle()
+                    } label: {
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                    }
+                }
+            }
+            .actionSheet(isPresented: $showingSortOrder) {
+                ActionSheet(title: Text("Sort items"),message: nil, buttons: [
+                    .default(Text("Optimized")){ sortOrder = .optimized },
+                    .default(Text("Creation Date")) { sortOrder = .creationDate },
+                    .default(Text("Title")) { sortOrder = .title }
+                ])
             }
         }
         

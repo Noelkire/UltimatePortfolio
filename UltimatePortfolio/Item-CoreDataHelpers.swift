@@ -29,4 +29,7 @@ extension Item {
         item.creationDate = Date()
         return item
     }
+    enum SortOrder {
+        case optimized, title, creationDate
+    }
 }

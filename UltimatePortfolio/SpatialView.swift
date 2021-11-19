@@ -14,7 +14,7 @@ struct SpatialView: View {
     //creating the scene
     static func makeScene() -> SCNScene? {
         let scene = SCNScene(named: "test.scn")
-        scene?.background.contents = Color.clear
+        scene?.background.contents = UIColor.clear
         return scene
     }
     let scene = makeScene()
@@ -29,7 +29,7 @@ struct SpatialView: View {
         let geometry = SCNBox(width:1,height:1,length: 1,chamferRadius: 0.2)
         let material = SCNMaterial()
         let boxNode = SCNNode(geometry: geometry)
-        material.diffuse.contents = Color.teal
+        material.diffuse.contents = UIColor.orange
         
         boxNode.name = "box"
         boxNode.position = SCNVector3(x: 1, y:0, z: 1)
@@ -46,11 +46,11 @@ struct SpatialView: View {
                     SceneView(
                         scene: scene,
                         pointOfView: cameraNode,
-                        options: [.allowsCameraControl]
+                        options: [.allowsCameraControl,.autoenablesDefaultLighting]
                     )
                         .frame(width: 400, height: 400)
                     Text("Cone")
-                        .font(.title)
+                        .font(.largeTitle)
                 }
                 HStack {
                     Button(action: {
