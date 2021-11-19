@@ -23,6 +23,8 @@
 		5049A482274720C3004D6034 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049A481274720C3004D6034 /* ProjectHeaderView.swift */; };
 		5049A48427472272004D6034 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5049A48327472272004D6034 /* Colors.xcassets */; };
 		5049A48627472312004D6034 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049A48527472312004D6034 /* EditProjectView.swift */; };
+		5049A488274752E1004D6034 /* SpatialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049A487274752E1004D6034 /* SpatialView.swift */; };
+		5049A48A27476B8B004D6034 /* test.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5049A48927476B8B004D6034 /* test.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		5049A481274720C3004D6034 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		5049A48327472272004D6034 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5049A48527472312004D6034 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		5049A487274752E1004D6034 /* SpatialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialView.swift; sourceTree = "<group>"; };
+		5049A48927476B8B004D6034 /* test.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = test.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				500EDD292747093C00FE3714 /* Item-CoreDataHelpers.swift */,
 				500EDD2B27470A5E00FE3714 /* Project-CoreDataHelpers.swift */,
 				5033DA8D27463ECD003BA684 /* ContentView.swift */,
+				5049A487274752E1004D6034 /* SpatialView.swift */,
+				5049A48927476B8B004D6034 /* test.scn */,
 				500EDD2D274710C700FE3714 /* EditItemView.swift */,
 				5033DA9927464276003BA684 /* Main.xcdatamodeld */,
 				500EDD232746E86E00FE3714 /* DataController.swift */,
@@ -163,6 +169,7 @@
 			files = (
 				5049A48427472272004D6034 /* Colors.xcassets in Resources */,
 				5033DA9327463ECE003BA684 /* Preview Assets.xcassets in Resources */,
+				5049A48A27476B8B004D6034 /* test.scn in Resources */,
 				5033DA9027463ECE003BA684 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +188,7 @@
 				5049A48627472312004D6034 /* EditProjectView.swift in Sources */,
 				500EDD242746E86E00FE3714 /* DataController.swift in Sources */,
 				500EDD302747153B00FE3714 /* ItemRowView.swift in Sources */,
+				5049A488274752E1004D6034 /* SpatialView.swift in Sources */,
 				5033DA8E27463ECD003BA684 /* ContentView.swift in Sources */,
 				5049A48027471D69004D6034 /* Binding-OnChange.swift in Sources */,
 				500EDD262746F27E00FE3714 /* HomeView.swift in Sources */,

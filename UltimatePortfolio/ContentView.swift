@@ -29,6 +29,12 @@ struct ContentView: View {
                     Image(systemName: "checkmark")
                     Text("Closed")
                 }
+            SpatialView()
+                .tag(SpatialView.tag)
+                .tabItem {
+                    Image(systemName: "cube.transparent")
+                    Text("3D")
+                }
         }
     }
 }
